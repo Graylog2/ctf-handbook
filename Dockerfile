@@ -22,23 +22,21 @@ RUN pip install --upgrade pip \
 && pip install mkdocs-git-revision-date-localized-plugin \ 
 && pip install pip install mkdocs-dracula-theme
 
-USER root
-
-COPY ./scripts/update.sh update.sh
-COPY ./scripts/launch.sh launch.sh
-COPY ./scripts/update.cron /etc/cron.d/update
-
-
-RUN chmod 0644 /etc/cron.d/update \
-&& chmod 0744 /usr/src/mkdocs/build/update.sh \
-&& crontab /etc/cron.d/update \
-&& touch /var/log/cron.log \
-&& chmod 0744 /usr/src/mkdocs/build/launch.sh \
-&& git clone $REPO /build/ \
-&& chown mkdocs:mkdocs -R /build
-
-USER mkdocs
+# USER root
+# 
+# COPY ./scripts/update.sh update.sh
+# COPY ./scripts/launch.sh launch.sh
+# COPY ./scripts/update.cron /etc/cron.d/update
+# 
+# 
+# RUN chmod 0644 /etc/cron.d/update \
+# && chmod 0744 /usr/src/mkdocs/build/update.sh \
+# && crontab /etc/cron.d/update \
+# && touch /var/log/cron.log \
+# && chmod 0744 /usr/src/mkdocs/build/launch.sh \
+# && git clone $REPO /build/ \
+# && chown mkdocs:mkdocs -R /build
 
 EXPOSE 10080
 
-ENTRYPOINT ["/usr/src/mkdocs/build/launch.sh"]
+ENTRYPOINT ["mkdocs","serve"]

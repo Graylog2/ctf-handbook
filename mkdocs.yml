@@ -2,6 +2,7 @@ site_name: Graylog CTF Handbook
 site_url: https://handbook.logfather.org
 docs_dir: /build/data/docs
 dev_addr: 0.0.0.0:10080
+repo_url: $REPO
 theme:
     name: dracula
     locale: en
