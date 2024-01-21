@@ -9,8 +9,6 @@ RUN adduser -h /usr/src/mkdocs -D -u $USER mkdocs \
 ENV PATH="${PATH}:/usr/src/mkdocs/.local/bin"
 ENV REPO=$REPO
 
-EXPOSE 1234
-
 USER mkdocs
 RUN mkdir -p /usr/src/mkdocs/build
 WORKDIR /usr/src/mkdocs/build
@@ -40,5 +38,7 @@ RUN chmod 0644 /etc/cron.d/update \
 && chown mkdocs:mkdocs -R /build
 
 USER mkdocs
+
+EXPOSE 1234
 
 ENTRYPOINT ["/usr/src/mkdocs/build/launch.sh"]
