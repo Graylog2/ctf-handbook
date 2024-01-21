@@ -15,9 +15,8 @@ USER mkdocs
 RUN mkdir -p /usr/src/mkdocs/build
 WORKDIR /usr/src/mkdocs/build
 
-RUN pip install --upgrade pip
-
-RUN pip install pymdown-extensions \
+RUN pip install --upgrade pip \
+&& pip install pymdown-extensions \
 && pip install mkdocs \
 && pip install mkdocs-material \
 && pip install mkdocs-rtd-dropdown \
@@ -27,30 +26,18 @@ RUN pip install pymdown-extensions \
 
 USER root
 
-COPY ./scripts/update.sh /usr/src/mkdocs/build/update.sh
-RUN chmod 0744 /usr/src/mkdocs/build/update.sh
-
-# Build Auto-update hack mess.  Jeeebus this is ugly.  
-# As we always say in golf, there are no pictures in a Dockerfile
-
-# Copy hello-cron file to the cron.d directory
+COPY ./scripts/update.sh update.sh
+COPY ./scripts/launch.sh launch.sh
 COPY ./scripts/update.cron /etc/cron.d/update
- 
-# Give execution rights on the cron job
-RUN chmod 0644 /etc/cron.d/update
 
-# Apply cron job
-RUN crontab /etc/cron.d/update
- 
-# Create the log file to be able to run tail
-RUN touch /var/log/cron.log
 
-COPY ./scripts/launch.sh /usr/src/mkdocs/build/launch.sh
-
-# Run the command on container startup
-RUN chmod 0744 /usr/src/mkdocs/build/launch.sh
-RUN git clone $REPO /build/
-RUN chown mkdocs:mkdocs -R /build
+RUN chmod 0644 /etc/cron.d/update \
+&& chmod 0744 /usr/src/mkdocs/build/update.sh \
+&& crontab /etc/cron.d/update \
+&& touch /var/log/cron.log \
+&& chmod 0744 /usr/src/mkdocs/build/launch.sh \
+&& git clone $REPO /build/ \
+&& chown mkdocs:mkdocs -R /build
 
 USER mkdocs
 
