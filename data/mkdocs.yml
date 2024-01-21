@@ -1,6 +1,6 @@
 site_name: Graylog CTF Handbook
 site_url: https://handbook.logfather.org
-docs_dir: /build/docs
+docs_dir: /build/data/docs
 theme:
     name: dracula
     locale: en

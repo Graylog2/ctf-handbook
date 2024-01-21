@@ -26,9 +26,6 @@ RUN pip install pymdown-extensions \
 && pip install pip install mkdocs-dracula-theme
 
 USER root
-# Copy the init and make it executionerable
-COPY ./scripts/init.sh /usr/src/mkdocs/build/init.sh
-RUN chmod 0744 /usr/src/mkdocs/build/init.sh
 
 COPY ./scripts/update.sh /usr/src/mkdocs/build/update.sh
 RUN chmod 0744 /usr/src/mkdocs/build/update.sh
@@ -52,9 +49,9 @@ COPY ./scripts/launch.sh /usr/src/mkdocs/build/launch.sh
 
 # Run the command on container startup
 RUN chmod 0744 /usr/src/mkdocs/build/launch.sh
+RUN git clone $REPO /build/
+RUN chown mkdocs:mkdocs -R /build
 
 USER mkdocs
-
-COPY ./data/mkdocs.yml /usr/src/mkdocs/build/.clone/data/mkdocs.yml
 
 ENTRYPOINT ["/usr/src/mkdocs/build/launch.sh"]
