@@ -39,6 +39,6 @@ RUN chmod 0644 /etc/cron.d/update \
 
 USER mkdocs
 
-EXPOSE 1234
+EXPOSE 10080
 
 ENTRYPOINT ["/usr/src/mkdocs/build/launch.sh"]

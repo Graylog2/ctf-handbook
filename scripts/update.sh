@@ -1,2 +1,2 @@
 #!/bin/bash
-git -C /usr/src/mkdocs/.clone/ pull
+git -C /build/ pull
