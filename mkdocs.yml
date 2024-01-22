@@ -1,8 +1,6 @@
 site_name: Graylog CTF Handbook
 site_url: https://handbook.logfather.org
-docs_dir: /build/data/docs
-dev_addr: 0.0.0.0:10080
-repo_url: $REPO
+repo_url: !ENV REPO
 theme:
     name: dracula
     locale: en
@@ -28,6 +26,3 @@ nav:
   - "WTF is a Graylog?": 'graylog/Introduction.md'
   - "CTF Adventurers Guide":
     - "SQL Injection for the frugal hacker": 'ctf/sql-injection_1.md' 
-  - "Raspberry & Orange PI":
-    - "Move root file system to USB storage (RPI2 & RPI3)": 'old/raspberry/Move_Root_File_System_To_Usb_Storage_(rpi2_&_Rpi3).md'
-
