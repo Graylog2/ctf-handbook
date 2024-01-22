@@ -1,6 +1,6 @@
 site_name: Graylog CTF Handbook
 site_url: https://handbook.logfather.org
-repo_url: !ENV REPO
+#repo_url: !ENV REPO
 theme:
     name: dracula
     locale: en
@@ -23,6 +23,7 @@ theme:
 
 nav:
   - "Getting Started": 'index.md'
+  - "Test update": 'test.md'
   - "WTF is a Graylog?": 'graylog/Introduction.md'
   - "CTF Adventurers Guide":
     - "SQL Injection for the frugal hacker": 'ctf/sql-injection_1.md' 
