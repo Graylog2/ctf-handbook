@@ -1,29 +1,3 @@
-site_name: Graylog CTF Handbook
-site_url: https://handbook.logfather.org
-#repo_url: !ENV REPO
+site_name: Abes House of Horrors
 theme:
-    name: dracula
-    locale: en
-    features:
-      - search.suggest
-      - search.highlight
-      - navigation.sections
-      - navigation.tabs
-    palette:
-      - scheme: default
-        toggle:
-          icon: material/toggle-switch-off-outline
-          name: Switch to dark mode
-      - scheme: slate
-        toggle:
-          icon: material/toggle-switch
-          name: Switch to light mode
-          primary: green
-          accent: ambe
-
-nav:
-  - "Getting Started": 'index.md'
-  - "Test update": 'test.md'
-  - "WTF is a Graylog?": 'graylog/Introduction.md'
-  - "CTF Adventurers Guide":
-    - "SQL Injection for the frugal hacker": 'ctf/sql-injection_1.md' 
+  name: material
