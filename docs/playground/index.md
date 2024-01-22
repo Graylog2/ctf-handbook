@@ -1,12 +1,9 @@
-# Welcome to the Graylog Capture the Flag Challenge!
+# The Playground
 
 Let's get familiar with the interface. Please complete the following!
 - Successfully Log in to your Graylog instance
 - Checkout the Datasets Tab
 - Checkout the Webhooks Tab
-- Take note of the `Lessons` as they provide loads of valuable tips!
-
-<br>
 
 # Accessing Graylog Web Interface
 
