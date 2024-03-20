@@ -13,5 +13,3 @@ You came here for a crash course in Graylog for the purpose of winning a CTF and
 ### HACK ON
 
 Navigation to your left, my friends.
-
-### Testing for Jim
