@@ -23,7 +23,7 @@ The Geo-Location Processor plugin scans all messages for fields containing exclu
             >Note, this path will differ depending on your configuration. This path is inside our Docker Container for this lab
         - Click `Update configuration`
 
-            <img src="images/pipeline-illuminatep5.png" width="541" height="487">
+            <img src="./images/pipeline-illuminatep5.png" width="541" height="487">
 
 >>>**Send those logs in again from the Dataset tab!**
 
