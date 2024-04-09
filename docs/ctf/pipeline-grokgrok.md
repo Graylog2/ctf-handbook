@@ -33,7 +33,7 @@ GROK makes turning logs into fields a breeze. With the example log message we ca
 
 There are so many patterns built-in. We are going to use `%{IPv4}` and `%{INT}` to grab the details of the source IP, Destination IP, Source Port and Destination Port:
 
-![](images/pipeline-grokgrokp1.png)
+![](./images/pipeline-grokgrokp1.png)
 
 
 <br>
