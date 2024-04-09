@@ -14,11 +14,11 @@ Graylog Illuminate provides pre-built content designed with common cybersecurity
 - Open your *Graylog instance*
 - Navigate to `Enterprise -> Illuminate`
 
-    <img src="images/pipeline-illuminatep1.png" width="150" height="200">
-
+    ![](./images/pipeline-illuminatep1.png)
+    
 - Check off `Illuminate x.x.x:pfSense/OPNsense Firewall` in the processing packs
     
-    <img src="images/pipeline-illuminate-pfpp.png" width="400">
+    ![](./images/pipeline-illuminate-pfpp.png)
 
     `**It should look similar to this**`
 
