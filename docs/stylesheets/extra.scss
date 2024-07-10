@@ -29,7 +29,7 @@
 @extend %root;
 
 // Indicate that the site is rendered with a light color scheme
-color-scheme: light;
+//color-scheme: light;
 
 // Hide images for dark mode
 img[src$="#only-dark"],
@@ -133,3 +133,10 @@ img[src$="#gh-dark-mode-only"] {
     0 #{px2rem(4px)} #{px2rem(10px)} hsla(0, 0%, 0%, 0.2),
     0 0              #{px2rem(1px)}  hsla(0, 0%, 0%, 0.35);
 }
+
+
+// Adjusting the Slate colours
+
+[data-md-color-scheme=slate] {
+    --md-default-bg-color: #211A4D;
+   }
