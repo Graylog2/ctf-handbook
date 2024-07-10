@@ -7,15 +7,16 @@
 @extend %root;
 
 // Primary color shades
---md-primary-fg-color:               hsla(#f44040, 1);
+--md-primary-fg-color:               hsla(#00E286, 1);
 --md-primary-fg-color--light:        hsla(#EBEEF2, 1);
---md-primary-fg-color--dark:         hsla(#3E434C, 1);
---md-primary-bg-color:               hsla(0, 0%, 100%, 1);
+--md-primary-fg-color--dark:         hsla(#4F3EC1, 1);
+//--md-primary-bg-color:               hsla(0, 0%, 100%, 1);
+--md-primary-bg-color:               hsla(#211A4D, 1);
 --md-primary-bg-color--light:        hsla(0, 0%, 100%, 0.7);
 
 // Accent color shades
---md-accent-fg-color:                hsla(#57ABEA, 1);
---md-accent-fg-color--transparent:   hsla(#F98A3A, 0.1);
+--md-accent-fg-color:                hsla(#03C3FF, 1);
+--md-accent-fg-color--transparent:   hsla(#FF8533, 0.1);
 --md-accent-bg-color:                hsla(0, 0%, 100%, 1);
 --md-accent-bg-color--light:         hsla(0, 0%, 100%, 0.7);
 }
