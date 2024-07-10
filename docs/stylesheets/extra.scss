@@ -21,7 +21,50 @@
 }
 
 // ----------------------------------------------------------------------------
+// Who knows if this will work: Love, Abe
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,900;1,400&display=swap');
 
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+:root {
+    /* Font definitions */
+    --md-font-body: "Poppins", sans-serif; /* Default font */
+    --md-font-title: "Poppins", sans-serif; /* Title font */
+  }
 // Allow to explicitly use color schemes in nested content
 [data-md-color-scheme="default"] {
 @extend %root;

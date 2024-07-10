@@ -24,7 +24,9 @@ Here is the flag for the challenge "Getting Started:  WTF is a CTF?"
 
 Copy and paste that into the appropriate challenge on your scoreboard page.  
 
-Let's try a harder one.  Your clue is "The next flag *requires selection*":  
+Let's try a harder one.  This platform is limited, so make sure you're on Light Mode (Click the "Sun Icon" next to the search page until the background of this site is WHITE). 
+
+Your clue is "The next flag *requires selection*":  
 <span style="color:white">ultra hidden flag</span>  
 Use your cursor and select the blank space between this line and the text above and you should find some hidden text!
 
