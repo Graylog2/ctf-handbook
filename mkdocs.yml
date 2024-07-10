@@ -20,7 +20,7 @@ theme:
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+      scheme: default
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
