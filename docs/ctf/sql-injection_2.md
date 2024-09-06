@@ -11,13 +11,18 @@ SELECT * FROM Products WHERE catid = 1000;
 ```
 Now, our intrepid hacker, armed with nothing but a keyboard and a solid understanding of SQL, decides to add a little something extra to that catid parameter, like `'` OR `'1'='1`. The resulting query?
 ```sql
-SELECT * FROM Products WHERE catid = '1000' OR '1'='1';
+SELECT * FROM Products WHERE catid = 1000 OR '1'='1';
 ```
-And boom! Just like that, the entire product catalogue is laid bare. But our hacker wants more. They want to see what other databases are hiding in the shadows. So, they might try injecting a command to list databases, URL encoded of course, like 
+
+If you're looking at the tool that we mentioned previously, which Of course you are, because you didn't just skim this document hunting for clues and now you're reading backwards from screenshots you don't recognize, then you would see something that looks like this. 
+
+![Screenshot](images/hackbar.png.png)
+
+And boom! Just like that, the entire product catalogue is laid bare. But our hacker wants more. They want to see what other databases are hiding in the shadows. So, they might try injecting a command to list databases.  I'll save you the hassle of learning this database.
 ```sql
-' UNION SELECT schema_name, 2, 3 FROM information_schema.schemata --
+UNION SELECT schema_name, 2, 3 FROM information_schema.schemata --
 ```
-This will give them a list of all databases. From here, it's a guessing game. `'users'`, `'customers'`, `'members'` - common names for databases holding juicy information.
+This will look for the tables using a clever trick, and add it to the output of your super hardcore SQL injected payment page.  Now, it's a guessing game. `'users'`, `'customers'`, `'members'` - common names for databases holding juicy information.
 
 But here's where the magic happens. The `UNION` command is the Swiss Army knife of SQL injection. It allows our hacker to combine the results of their injected query with the results of the original query. But there's a catch: the number of columns in the UNIONed query has to match the original.
 
@@ -27,7 +32,7 @@ So, let's say our hacker knows there's a `'users'` database and it contains `'fi
 ```sql
 catid=1000 UNION SELECT firstname, email, lastname FROM users LIMIT 7, 100
 ```
-In URL encoding, it would look like this: 
+In URL encoding, because you live life on hardcore mode and you're injecting by URL - which means you probably aren't reading this tutorial but the above statement would look like this: 
 ##### THERE DO BE ANSWERS HERE
 ```
 catid=1000%20UNION%20SELECT%20firstname%2C%20email%2C%20lastname%20FROM%20users%20LIMIT%207%2C%20100
