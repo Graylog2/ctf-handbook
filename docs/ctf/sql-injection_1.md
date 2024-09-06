@@ -25,4 +25,7 @@ In the end, we all want to be the Logfather of our data: unruffled, insightful, 
 
 I mean, you said 'seriously' but I didn't take you seriously. 
 
-> I reward those who follow instructions.  Spoilers ahead.  
+> I reward those who follow instructions.  Spoilers ahead.
+
+Find a tool that you can use to try SQL Injection.  If you are the kind of person that reads 'Choose your own Adventure' books from start to finish, try [this](https://chromewebstore.google.com/detail/hackbar/ginpbkfigcoaokgflihfhhmglmbchinc?pli=1) in chrome.  There are others for whatever flavour of browser you prefer to chew on.  They even have the same name. 
+
