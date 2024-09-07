@@ -16,7 +16,7 @@ SELECT * FROM Products WHERE catid = 1000 OR '1'='1';
 
 If you're looking at the tool that we mentioned previously, which Of course you are, because you didn't just skim this document hunting for clues and now you're reading backwards from screenshots you don't recognize, then you would see something that looks like this. 
 
-![Screenshot](images/hackbar.png.png)
+![Screenshot](./images/hackbar.png.png)
 
 And boom! Just like that, the entire product catalogue is laid bare. But our hacker wants more. They want to see what other databases are hiding in the shadows. So, they might try injecting a command to list databases.  I'll save you the hassle of learning this database.
 ```sql
