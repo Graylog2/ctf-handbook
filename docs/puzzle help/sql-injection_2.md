@@ -22,10 +22,11 @@ And boom! Just like that, we injected a statement that returns 'TRUE' from the d
 
 You can read all about how this works later, but in this case, we are pilfering the filthy database behind this amazing website and aligning with with the correct output of columns.  To do that, you need to figure out how many columns you have.   Do this, adding a new 'Null' until you stop getting errors.  You can also look at your displayed tables on teh website and take an educated guess.
 
-```sql```
+```sql
 catid=1000 UNION SELECT NULL, NULL--
 ```
-When you have the right amount - which isn't displayed below, so stop copy and pasting, you'll be able to view all the tables by simply asking the database to tell you. 
+When you have the right amount - which isn't displayed below, so stop copy and pasting, you'll be able to view all the tables by simply asking the database to tell you.  You can substitute `NULL` for numbers just to make keep track easier, but they'll be displayed with the data.  The life of a hacker is hard.  You could always just use your favourite spreadsheet tool and not somebody elses server, that's an option! 
+
 
 ```sql
 UNION SELECT table_name, 2, 3, 4, 5, 6 FROM information_schema.tables--
@@ -39,7 +40,7 @@ If our original query was fetching three columns of data, our injection needs to
 Want to see what exists in the `products` table?  Give 'er, young blood. 
 
 ```sql
- UNION SELECT COLUMN_NAME,2,3,4,5 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'products' --
+UNION SELECT COLUMN_NAME,2,3,4,5 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'products' --
  ```
 You have what you need.  The rest is on your cranial neurons bouncing around in the appropriate flightpaths.  Move your statements around, ask your favourite manager that's been replaced by AI, do the needful.  Score some points.
 
