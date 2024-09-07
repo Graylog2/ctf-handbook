@@ -41,7 +41,8 @@ Want to see what exists in the `products` table?  Give 'er, young blood.
 
 ```sql
 UNION SELECT COLUMN_NAME,2,3,4,5 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'products' --
- ```
+```
+
 You have what you need.  The rest is on your cranial neurons bouncing around in the appropriate flightpaths.  Move your statements around, ask your favourite manager that's been replaced by AI, do the needful.  Score some points.
 
 Remember, my friends, with great power comes great responsibility. SQL injections are a potent tool in the wrong hands. As cyber warriors, it's our job to defend against such threats. So, keep your wits about you, sanitize your inputs, and keep your apps secure. The future of the digital realm depends on it.
